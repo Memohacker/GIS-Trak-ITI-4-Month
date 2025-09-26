@@ -1,0 +1,334 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Cookie</title>
+    <style>
+      body.light {
+        background: #f5f5f5;
+        color: #222;
+      }
+      body.dark {
+        background: #222;
+        color: #f5f5f5;
+      }
+      body.blue {
+        background: #084391;
+        color: #fff;
+      }
+      select {
+        margin: 20px;
+        padding: 8px;
+        font-size: 1em;
+        border-radius: 6px;
+      }
+    </style>
+  </head>
+  <body class="light">
+    
+    <button
+      onclick="document.cookie='username=MeMo; max-age=86400;'; alert('Cookie created!')"
+    >
+      Create Cookie
+    </button>
+
+    <button
+      onclick="alert((document.cookie.split('; ').find(r=>r.startsWith('username='))?.split('=')[1]) || 'Cookie not found!')"
+    >
+      Read Cookie
+    </button>
+
+    <button
+      onclick="var d=new Date();d.setTime(d.getTime()+86400000);
+      document.cookie='username=YourName; expires='+d.toUTCString()+'; path=/';alert('Cookie updated!')"
+    >
+      Update Cookie
+    </button> 
+    -->
+
+<!-- <label for="themeSwitcher">Theme:</label>
+    <select id="themeSwitcher">
+      <option value="light">Light</option>
+      <option value="dark">Dark</option>
+      <option value="blue">Blue</option>
+    </select>
+
+    <script>
+      // Theme switcher
+      document.getElementById("themeSwitcher").onchange = function () {
+        document.body.className = this.value;
+      };
+    </script>
+  </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Validated Form with Themes</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: url("https://images.unsplash.com/photo-1508780709619-79562169bc64")
+          no-repeat center center/cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        transition: background 0.3s ease;
+      }
+      form {
+        background: rgba(255, 255, 255, 0.9);
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        width: 300px;
+        backdrop-filter: blur(6px);
+        transition: background 0.3s ease, color 0.3s ease;
+      }
+      body.dark form {
+        background: rgba(0, 0, 0, 0.75);
+        color: white;
+      }
+      label {
+        display: block;
+        margin-top: 10px;
+        font-weight: bold;
+      }
+      input {
+        width: 100%;
+        padding: 8px;
+        margin-top: 4px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        background: white;
+        color: black;
+        transition: background 0.3s ease, color 0.3s ease;
+      }
+      body.dark input {
+        background: #1e1e1e;
+        color: white;
+        border: 1px solid #555;
+      }
+      input.invalid {
+        border-color: red;
+        background: #ffe6e6;
+      }
+      body.dark input.invalid {
+        background: #5a2a2a;
+      }
+      .hint {
+        font-size: 12px;
+        margin-top: 3px;
+      }
+      .hint.success {
+        color: green;
+      }
+      .hint.error {
+        color: red;
+      }
+      body.dark .hint.success {
+        color: #66ff66;
+      }
+      body.dark .hint.error {
+        color: #ff6666;
+      }
+      .strength {
+        margin-top: 4px;
+        font-size: 13px;
+        font-weight: bold;
+      }
+      .strength.weak {
+        color: red;
+      }
+      .strength.medium {
+        color: orange;
+      }
+      .strength.strong {
+        color: green;
+      }
+      body.dark .strength.weak {
+        color: #ff6666;
+      }
+      body.dark .strength.medium {
+        color: #ffb84d;
+      }
+      body.dark .strength.strong {
+        color: #66ff66;
+      }
+      .success-message {
+        margin-top: 15px;
+        color: green;
+        font-weight: bold;
+        text-align: center;
+      }
+      body.dark .success-message {
+        color: #66ff66;
+      }
+      button {
+        margin-top: 15px;
+        width: 100%;
+        background: #007bff;
+        color: white;
+        border: none;
+        padding: 10px;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+      }
+      button:hover {
+        background: #0056b3;
+      }
+      /* Theme Toggle Button */
+      .theme-toggle {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        padding: 6px 12px;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 14px;
+        backdrop-filter: blur(3px);
+        transition: background 0.3s ease;
+      }
+      body.dark .theme-toggle {
+        background: rgba(255, 255, 255, 0.5);
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Theme Toggle Button -->
+    <button class="theme-toggle" id="themeToggle">🌙 Dark</button>
+
+    <form id="myForm">
+      <!-- Username -->
+      <label for="username">Username</label>
+      <input type="text" id="username" />
+      <div id="usernameHint" class="hint"></div>
+
+      <!-- Email -->
+      <label for="email">Email</label>
+      <input type="email" id="email" />
+      <div id="emailHint" class="hint"></div>
+
+      <!-- Password -->
+      <label for="password">Password</label>
+      <input type="password" id="password" />
+      <div id="passwordStrength" class="strength"></div>
+
+      <button type="submit">Submit</button>
+      <div id="successMessage" class="success-message"></div>
+    </form>
+
+    <script>
+      const usernameInput = document.getElementById("username");
+      const emailInput = document.getElementById("email");
+      const passwordInput = document.getElementById("password");
+
+      const usernameHint = document.getElementById("usernameHint");
+      const emailHint = document.getElementById("emailHint");
+      const passwordStrength = document.getElementById("passwordStrength");
+      const successMessage = document.getElementById("successMessage");
+
+      let usernameValid = false;
+      let emailValid = false;
+      let passwordValid = false;
+
+      // Username Validation
+      usernameInput.addEventListener("input", () => {
+        const value = usernameInput.value.trim();
+        if (/^[a-zA-Z0-9]{3,12}$/.test(value)) {
+          usernameValid = true;
+          usernameHint.textContent = "✅ Valid username";
+          usernameHint.className = "hint success";
+          usernameInput.classList.remove("invalid");
+        } else {
+          usernameValid = false;
+          usernameHint.textContent =
+            "❌ Username must be 3-12 alphanumeric characters.";
+          usernameHint.className = "hint error";
+          usernameInput.classList.add("invalid");
+        }
+      });
+
+      // Email Validation on blur
+      emailInput.addEventListener("blur", () => {
+        const value = emailInput.value.trim();
+        if (/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(value)) {
+          emailValid = true;
+          emailHint.textContent = "✅ Valid email";
+          emailHint.className = "hint success";
+          emailInput.classList.remove("invalid");
+        } else {
+          emailValid = false;
+          emailHint.textContent = "❌ Please enter a valid email address.";
+          emailHint.className = "hint error";
+          emailInput.classList.add("invalid");
+        }
+      });
+
+      // Password Validation + Strength Meter
+      passwordInput.addEventListener("input", () => {
+        const value = passwordInput.value;
+        let strength = 0;
+
+        if (value.length >= 8) strength++;
+        if (/[A-Z]/.test(value)) strength++;
+        if (/[0-9]/.test(value)) strength++;
+
+        if (strength === 3) {
+          passwordStrength.textContent = "Strong";
+          passwordStrength.className = "strength strong";
+          passwordValid = true;
+          passwordInput.classList.remove("invalid");
+        } else if (strength === 2) {
+          passwordStrength.textContent = "Medium";
+          passwordStrength.className = "strength medium";
+          passwordValid = false;
+          passwordInput.classList.add("invalid");
+        } else {
+          passwordStrength.textContent = "Weak";
+          passwordStrength.className = "strength weak";
+          passwordValid = false;
+          passwordInput.classList.add("invalid");
+        }
+      });
+
+      // Form Submission
+      document
+        .getElementById("myForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          if (usernameValid && emailValid && passwordValid) {
+            successMessage.textContent = "🎉 Form submitted successfully!";
+            usernameInput.classList.remove("invalid");
+            emailInput.classList.remove("invalid");
+            passwordInput.classList.remove("invalid");
+          }  else {
+            successMessage.textContent = "";
+            if (!usernameValid) usernameInput.classList.add("invalid");
+            if (!emailValid) emailInput.classList.add("invalid");
+            if (!passwordValid) passwordInput.classList.add("invalid");
+            alert("Please correct the highlighted fields.");
+          }
+        });
+
+      // Theme Toggle
+      const themeToggle = document.getElementById("themeToggle");
+      themeToggle.addEventListener("click", () => {
+        document.body.classList.toggle("dark");
+        themeToggle.textContent = document.body.classList.contains("dark")
+          ? "☀️ Light"
+          : "🌙 Dark";
+      });
+    </script>
+  </body>
+</html>

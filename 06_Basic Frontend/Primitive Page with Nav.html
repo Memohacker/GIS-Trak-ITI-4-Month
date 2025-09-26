@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<!-- saved from url=(0035)http://127.0.0.1:5500/css/task.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primitive Page with Nav</title>
+    <link href="./Primitive Page with Nav_files/bootstrap-icons.css" rel="stylesheet">
+
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+      }
+
+      /* Nav */
+      nav {
+        background: #222;
+        color: white;
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      nav a {
+        color: white;
+        margin-left: 15px;
+        text-decoration: none;
+      }
+      nav a:hover {
+        text-decoration: underline;
+      }
+
+      /* Header */
+      header {
+        height: 100vh;
+        background: lightblue;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        text-align: center;
+        padding-bottom: 40px;
+      }
+
+      header h1 {
+        margin: 0;
+      }
+      header p {
+        margin: 10px 0;
+      }
+
+      header button {
+        padding: 8px 16px;
+        margin-top: 10px;
+        border: none;
+        background: #00fff2;
+        color: white;
+        cursor: pointer;
+      }
+
+      /* Services Section */
+      section {
+        padding: 60px 0;
+        text-align: center;
+      }
+
+      .icons {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 15%;
+      }
+
+      .icon-box {
+        flex: 1;
+        margin: 0 10px;
+      }
+
+      .icon-box i {
+        font-size: 40px;
+        color: #0077cc;
+        margin-bottom: 10px;
+        display: block;
+      }
+
+      .icon-box button {
+        margin-top: 10px;
+        padding: 5px 10px;
+      }
+
+      /* Image Container */
+      .image-container {
+        width: 1200px; /* fixed width */
+        margin: 20px auto;
+        overflow: auto; /* scroll if images overflow */
+        background: #f5f5f5;
+        padding: 20px;
+        border: 2px solid #333;
+        border-radius: 10px;
+      }
+
+      /* Image Grid */
+      .image-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        /* gap: 20px; */
+        justify-items: center;
+        align-items: center;
+      }
+
+      .image-grid img {
+        width: 400px;
+        height: 300px;
+        object-fit: cover;
+        border: 2px solid #ccc;
+        border-radius: 8px;
+        background-color: rgb(32, 118, 175);
+      }
+
+      .image-grid > div {
+        /* width: 400px; */
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+      }
+    </style>
+  <link rel="stylesheet" href="chrome-extension://ihcjicgdanjaechkgeegckofjjedodee/app/content-style.css"></head>
+  <body>
+    <!-- Nav -->
+    <nav>
+      <span>MyLogo</span>
+      <div>
+        <a href="http://127.0.0.1:5500/css/task.html#home">Home</a>
+        <a href="http://127.0.0.1:5500/css/task.html#services">Services</a>
+        <a href="http://127.0.0.1:5500/css/task.html#about">About</a>
+        <a href="http://127.0.0.1:5500/css/task.html#contact">Contact</a>
+      </div>
+    </nav>
+
+    <!-- Header -->
+    <header id="home">
+      <h1>Bottom Header</h1>
+      <p>This is a paragraph under the header.</p>
+      <button>Get Started</button>
+    </header>
+
+    <!-- Services Section -->
+    <section id="services">
+      <h2>Our Services</h2>
+      <p>Simple explanation about what we offer.</p>
+
+      <div class="icons">
+        <div class="icon-box">
+          <i class="bi bi-house"></i>
+          <h4>Service One</h4>
+          <p>Simple text here</p>
+          <button>More</button>
+        </div>
+        <div class="icon-box">
+          <i class="bi bi-people"></i>
+          <h4>Service Two</h4>
+          <p>Simple text here</p>
+          <button>More</button>
+        </div>
+        <div class="icon-box">
+          <i class="bi bi-globe"></i>
+          <h4>Service Three</h4>
+          <p>Simple text here</p>
+          <button>More</button>
+        </div>
+        <div class="icon-box">
+          <i class="bi bi-lightbulb"></i>
+          <h4>Service Four</h4>
+          <p>Simple text here</p>
+          <button>More</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Image Grid Section -->
+    <h2 style="text-align: center">Blue prints</h2>
+    <p style="text-align: center">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum autem
+      in sed consequatur ratione nisi quaerat fugit quibusdam! Nulla, eligendi
+      enim! Unde asperiores fugiat corporis enim dolore saepe voluptates
+      consequatur.
+    </p>
+
+    <!-- Container -->
+    <div class="image-container">
+      <div class="image-grid">
+        <div>
+          <img src="https://via.placeholder.com/400x300?text=Image+1" alt="Image 1">
+          <div><u>Image 1</u></div>
+        </div>
+        <div>
+          <img src="https://via.placeholder.com/400x300?text=Image+2" alt="Image 2">
+          <div><u>Image 2</u></div>
+        </div>
+        <div>
+          <img src="https://via.placeholder.com/400x300?text=Image+3" alt="Image 3">
+          <div><u>Image 3</u></div>
+        </div>
+        <div>
+          <img src="https://via.placeholder.com/400x300?text=Image+4" alt="Image 4">
+          <div><u>Image 4</u></div>
+        </div>
+        <div>
+          <img src="https://via.placeholder.com/400x300?text=Image+5" alt="Image 5">
+          <div><u>Image 5</u></div>
+        </div>
+        <div>
+          <img src="https://via.placeholder.com/400x300?text=Image+6" alt="Image 6">
+          <div><u>Image 6</u></div>
+        </div>
+      </div>
+    </div>
+    <section style="display: flex; justify-content: space-between; align-items: center">
+      <div style="
+          width: 400px;
+          height: 600px;
+          background-color: #ffffff;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          align-items: center;
+        ">
+        <div style="border: 1px solid blue">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero,
+          nisi! Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
+          soluta sequi, eligendi eveniet magnam distinctio laboriosam voluptas
+          voluptates ad ipsum esse accusantium animi numquam, quisquam earum.
+          Saepe possimus quos quas.lo
+        </div>
+        <div style="border: 1px solid blue">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero,
+          nisi! Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
+          soluta sequi, eligendi eveniet magnam distinctio laboriosam voluptas
+          voluptates ad ipsum esse accusantium animi numquam, quisquam earum.
+          Saepe possimus quos quas.lo
+        </div>
+        <div style="border: 1px solid blue">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero,
+          nisi! Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
+          soluta sequi, eligendi eveniet magnam distinctio laboriosam voluptas
+          voluptates ad ipsum esse accusantium animi numquam, quisquam earum.
+          Saepe possimus quos quas.lo
+        </div>
+      </div>
+      <div style="
+          display: flex;
+          width: 400px;
+          height: 600px;
+          background-color: #0077cc;
+          justify-content: center;
+          align-items: center;
+          font-weight: bold;
+          color: #ffffff;
+        ">
+        400 x 600
+      </div>
+      <div style="
+          width: 400px;
+          height: 600px;
+          background-color: #ffffff;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          align-items: center;
+        ">
+        <div style="border: 1px solid blue">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero,
+          nisi! Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
+          soluta sequi, eligendi eveniet magnam distinctio laboriosam voluptas
+          voluptates ad ipsum esse accusantium animi numquam, quisquam earum.
+          Saepe possimus quos quas.lo
+        </div>
+        <div style="border: 1px solid blue">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero,
+          nisi! Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
+          soluta sequi, eligendi eveniet magnam distinctio laboriosam voluptas
+          voluptates ad ipsum esse accusantium animi numquam, quisquam earum.
+          Saepe possimus quos quas.lo
+        </div>
+        <div style="border: 1px solid blue">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero,
+          nisi! Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
+          soluta sequi, eligendi eveniet magnam distinctio laboriosam voluptas
+          voluptates ad ipsum esse accusantium animi numquam, quisquam earum.
+          Saepe possimus quos quas.lo
+        </div>
+      </div>
+    </section>
+  <!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+</body></html>

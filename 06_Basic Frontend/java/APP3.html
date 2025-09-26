@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Information System Institute</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Leaflet CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+
+    <style>
+      :root {
+        --primary-color: #4361ee;
+        --secondary-color: #3f37c9;
+        --accent-color: #5a4cf0;
+        --dark-bg: #1e1e2e;
+        --light-bg: #f8f9fa;
+        --text-light: #f8f9fa;
+        --text-dark: #212529;
+        --success: #4ade80;
+        --warning: #facc15;
+        --danger: #f87171;
+        --border-radius: 12px;
+        --transition: all 0.3s ease;
+        --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+          0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Roboto", sans-serif;
+        background-color: #0f172a;
+        color: var(--text-light);
+        overflow: hidden;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      /* Map container */
+      #map {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+      }
+
+      /* Map overlay for better contrast */
+      .map-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          135deg,
+          rgba(67, 97, 238, 0.15),
+          rgba(63, 55, 201, 0.2)
+        );
+        z-index: 2;
+        pointer-events: none;
+      }
+
+      /* Top Navigation Bar */
+      .top-bar {
+        width: 95%;
+        height: 70px;
+        margin: 15px auto;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border-radius: var(--border-radius);
+        box-shadow: var(--shadow);
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 25px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        transition: var(--transition);
+        position: relative;
+      }
+
+      .top-bar:hover {
+        background: rgba(255, 255, 255, 0.15);
+      }
+
+      .logo-section {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+      }
+
+      .logo {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        background: linear-gradient(
+          135deg,
+          var(--primary-color),
+          var(--secondary-color)
+        );
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        box-shadow: var(--shadow);
+      }
+
+      .institute-name {
+        font-weight: 600;
+        font-size: 1.1rem;
+        background: linear-gradient(to right, #fff, #e0e7ff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: blue;
+        letter-spacing: 0.5px;
+      }
+
+      /* Center tabs */
+      .nav-tabs-custom {
+        display: flex;
+        gap: 5px;
+        justify-content: center;
+        flex-grow: 1;
+        background: rgba(255, 255, 255, 0.08);
+        padding: 6px;
+        border-radius: 50px;
+        max-width: 600px;
+      }
+
+      .nav-tabs-custom a {
+        position: relative;
+        font-size: 0.85rem;
+        font-weight: 500;
+        color: rgba(4, 89, 248, 0.7);
+        text-decoration: none;
+        padding: 8px 16px;
+        border-radius: 50px;
+        transition: var(--transition);
+        z-index: 1;
+        white-space: nowrap;
+      }
+
+      .nav-tabs-custom a.active {
+        color: #f8f9fa;
+        font-weight: 600;
+      }
+
+      .nav-tabs-custom a::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          to right,
+          var(--accent-color),
+          var(--primary-color)
+        );
+        border-radius: 50px;
+        opacity: 0;
+        transition: var(--transition);
+        z-index: -1;
+      }
+
+      .nav-tabs-custom a.active::before {
+        opacity: 1;
+      }
+
+      .nav-tabs-custom a:hover::before {
+        opacity: 1;
+      }
+
+      .nav-tabs-custom a i {
+        margin-right: 6px;
+        font-size: 13px;
+      }
+
+      /* USER SECTION */
+      .user-section {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        color: #06b4eb;
+        font-weight: 500;
+        cursor: pointer;
+        padding: 8px 16px;
+        border-radius: 50px;
+        transition: var(--transition);
+      }
+
+      .user-section:hover {
+        background: rgba(255, 255, 255, 0.1);
+      }
+
+      .user-photo {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid var(--accent-color);
+        box-shadow: 0 0 0 2px rgba(76, 201, 240, 0.3);
+        transition: var(--transition);
+      }
+
+      .user-section:hover .user-photo {
+        box-shadow: 0 0 0 4px rgba(76, 201, 240, 0.5);
+      }
+
+      .user-name {
+        font-size: 0.9rem;
+        font-weight: 500;
+      }
+
+      .widget-panel {
+        position: fixed;
+        top: 100px;
+        left: 20px;
+        bottom: 412px;
+        width: 119px;
+        backdrop-filter: blur(10px);
+        border-radius: var(--border-radius);
+        display: none;
+        flex-direction: column;
+        padding: 20px;
+        z-index: 10;
+        box-shadow: var(--shadow);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        overflow: hidden;
+        transition: var(--transition);
+        transform: translateX(-10px);
+        opacity: 0;
+        color: #3f37c9;
+      }
+      .widget-panel.active {
+        display: flex;
+        transform: translateX(0);
+        opacity: 1;
+        animation: slideIn 0.3s ease;
+      }
+
+      .panel-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .panel-header h3 {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: var(--accent-color);
+      }
+
+      .close-panel {
+        background: none;
+        border: none;
+        color: rgba(0, 0, 0, 0.363);
+        font-size: 1.2rem;
+        cursor: pointer;
+        transition: var(--transition);
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: right;
+      }
+
+      .close-panel:hover {
+        color: var(--danger);
+        background: rgba(255, 255, 255, 0.171);
+      }
+
+      .widget-list {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        overflow-y: auto;
+        padding-right: 5px;
+      }
+
+      .widget-list::-webkit-scrollbar {
+        width: 5px;
+      }
+
+      .widget-list::-webkit-scrollbar-thumb {
+        background: var(--primary-color);
+        border-radius: 10px;
+      }
+
+      .widget-btn {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        background: rgba(255, 255, 255, 0.08);
+        color: white;
+        border: none;
+        border-radius: 10px;
+        padding: 15px 20px;
+        cursor: pointer;
+        transition: var(--transition);
+        gap: 12px;
+      }
+
+      .widget-btn:hover {
+        background: rgba(67, 97, 238, 0.2);
+        transform: translateX(5px);
+      }
+
+      .widget-btn i {
+        font-size: 1.2rem;
+        color: var(--accent-color);
+      }
+
+      .widget-form {
+        position: fixed;
+        top: 100px;
+        left: 148px;
+        width: 204px;
+        bottom: 289px;
+        backdrop-filter: blur(10px);
+        color: white;
+        border-radius: var(--border-radius);
+        padding: 25px;
+        display: none;
+        box-shadow: var(--shadow);
+        z-index: 10;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        transition: var(--transition);
+        transform: translateX(-20px);
+        opacity: 0;
+      }
+
+      .widget-form.active {
+        display: block;
+        transform: translateX(0);
+        opacity: 1;
+        animation: slideIn 0.3s ease 0.1s forwards;
+      }
+
+      .form-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .form-header h3 {
+        font-size: 1.3rem;
+        font-weight: 600;
+        color: var(--accent-color);
+      }
+
+      .close-form {
+        background: none;
+        border: none;
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 1.2rem;
+        cursor: pointer;
+        transition: var(--transition);
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .close-form:hover {
+        color: var(--danger);
+        background: rgba(255, 255, 255, 0.1);
+      }
+
+      .form-control {
+        background: rgba(255, 255, 255, 0.07);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        color: rgba(0, 0, 0, 0.438);
+        border-radius: 8px;
+        padding: 12px 15px;
+        margin-bottom: 15px;
+        transition: var(--transition);
+      }
+
+      .form-control:focus {
+        background: rgba(4, 20, 243, 0.1);
+        border-color: var(--accent-color);
+        box-shadow: 0 0 0 3px rgba(76, 201, 240, 0.2);
+      }
+
+      .form-actions {
+        display: flex;
+        justify-content: flex-end;
+        gap: 10px;
+        margin-top: 20px;
+      }
+
+      .btn {
+        padding: 8px 20px;
+        border-radius: 8px;
+        font-weight: 500;
+        transition: var(--transition);
+        border: none;
+        cursor: pointer;
+      }
+
+      .btn-sm {
+        padding: 8px 16px;
+        font-size: 0.875rem;
+      }
+
+      .btn-danger {
+        background: var(--danger);
+        color: white;
+      }
+
+      .btn-danger:hover {
+        background: #71cdf8;
+        transform: translateY(-2px);
+      }
+
+      .btn-success {
+        background: var(--success);
+        color: white;
+      }
+
+      .btn-success:hover {
+        background: #4ade80;
+        transform: translateY(-2px);
+      }
+
+      /* Notifications */
+      .notification-toast {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background: var(--success);
+        color: white;
+        padding: 15px 20px;
+        border-radius: 8px;
+        box-shadow: var(--shadow);
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        transform: translateX(100%);
+        opacity: 0;
+        transition: var(--transition);
+      }
+
+      .notification-toast.show {
+        transform: translateX(0);
+        opacity: 1;
+      }
+
+      /* Map controls */
+      .map-controls {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .map-btn {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        /* background: rgba(30, 30, 46, 0.85); */
+        backdrop-filter: blur(10px);
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        cursor: pointer;
+        transition: var(--transition);
+        box-shadow: var(--shadow);
+      }
+
+      .map-btn:hover {
+        background: var(--primary-color);
+        transform: translateY(-3px);
+      }
+
+      /* Map style selector */
+      .map-style-selector {
+        position: fixed;
+        bottom: 30px;
+        left: 30px;
+        z-index: 10;
+        /* background: rgba(30, 30, 46, 0.85); */
+        backdrop-filter: blur(10px);
+        padding: 10px;
+        border-radius: var(--border-radius);
+        display: flex;
+        gap: 10px;
+        box-shadow: var(--shadow);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .style-btn {
+        padding: 8px 15px;
+        border-radius: 6px;
+        background: rgba(255, 255, 255, 0.1);
+        color: white;
+        border: none;
+        cursor: pointer;
+        transition: var(--transition);
+        font-size: 0.8rem;
+      }
+
+      .style-btn.active {
+        background: var(--primary-color);
+      }
+
+      .style-btn:hover {
+        background: var(--primary-color);
+      }
+
+      /* Animations */
+      @keyframes slideIn {
+        from {
+          transform: translateX(-20px);
+          opacity: 0;
+        }
+        to {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 1200px) {
+        .nav-tabs-custom a {
+          padding: 8px 14px;
+          font-size: 0.8rem;
+        }
+
+        .nav-tabs-custom a i {
+          margin-right: 4px;
+        }
+      }
+
+      @media (max-width: 992px) {
+        .nav-tabs-custom {
+          display: none;
+        }
+
+        .widget-panel {
+          width: 240px;
+        }
+
+        .widget-form {
+          width: 320px;
+          left: 280px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .top-bar {
+          width: 92%;
+          padding: 0 15px;
+        }
+
+        .institute-name {
+          font-size: 1rem;
+        }
+
+        .user-section span {
+          display: none;
+        }
+
+        .widget-panel {
+          position: fixed;
+          top: 100px;
+          left: 20px;
+          bottom: 292px;
+          width: 119px;
+          background: rgba(30, 30, 46, 0.85);
+          backdrop-filter: blur(10px);
+          border-radius: var(--border-radius);
+          display: none;
+          flex-direction: column;
+          padding: 20px;
+          z-index: 10;
+          box-shadow: var(--shadow);
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          overflow: hidden;
+          transition: var(--transition);
+          transform: translateX(-10px);
+          opacity: 0;
+        }
+
+        .widget-form {
+          width: 90%;
+          left: 5%;
+          top: 50%;
+          transform: translate(-20px, -50%);
+        }
+
+        .widget-form.active {
+          transform: translate(0, -50%);
+        }
+
+        .map-controls {
+          bottom: 20px;
+          right: 20px;
+        }
+
+        .map-style-selector {
+          bottom: 80px;
+          left: 20px;
+          flex-wrap: wrap;
+          max-width: calc(100% - 40px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <div class="map-overlay"></div>
+
+    <!-- Top Navigation Bar -->
+    <div class="top-bar">
+      <div class="logo-section">
+        <div class="logo">ISI</div>
+        <div class="institute-name">Information System Institute</div>
+      </div>
+
+      <div class="nav-tabs-custom">
+        <a href="#" class="tab active" data-tab="1"
+          ><i class="fas fa-home"></i> Dashboard</a
+        >
+        <a href="#" class="tab" data-tab="2"
+          ><i class="fas fa-chart-bar"></i> Analytics</a
+        >
+        <a href="#" class="tab" data-tab="3"
+          ><i class="fas fa-database"></i> Data Management</a
+        >
+        <a href="#" class="tab" data-tab="4"
+          ><i class="fas fa-cog"></i> Settings</a
+        >
+        <a href="#" class="tab" data-tab="5"
+          ><i class="fas fa-question-circle"></i> Support</a
+        >
+      </div>
+
+      <!-- User Section -->
+      <div class="user-section">
+        <span class="user-name">Mohamed Hesham</span>
+        <img src="1721255632971.png" alt="User Photo" class="user-photo" />
+      </div>
+    </div>
+
+    <!-- WIDGET PANEL -->
+    <div class="widget-panel" id="widgetPanel">
+      <button class="widget-btn" data-widget="1">
+        <i class="fas fa-chart-line"></i>
+      </button>
+      <button class="widget-btn" data-widget="2">
+        <i class="fas fa-users"></i>
+      </button>
+      <button class="widget-btn" data-widget="3">
+        <i class="fas fa-bell"></i>
+      </button>
+      <button class="widget-btn" data-widget="4">
+        <i class="fas fa-calendar"></i>
+      </button>
+      <button class="widget-btn" data-widget="5">
+        <i class="fas fa-file-alt"></i>
+      </button>
+      <div class="panel-header">
+        <button class="close-panel" id="closePanel">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="widget-list"></div>
+    </div>
+
+    <!-- WIDGET FORM -->
+    <div class="widget-form" id="widgetForm">
+      <div class="form-header">
+        <h3 id="formTitle">Widget Configuration</h3>
+        <button class="close-form" id="closeForm">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="form-content">
+        <input
+          type="text"
+          class="form-control form-control-sm mb-3"
+          placeholder="Widget Name"
+          id="widgetName"
+        />
+        <select class="form-control form-control-sm mb-3" id="widgetType">
+          <option value="">Select Widget Type</option>
+          <option value="chart">Chart</option>
+          <option value="table">Data Table</option>
+          <option value="metric">Metric Card</option>
+          <option value="list">List View</option>
+        </select>
+        <textarea
+          class="form-control"
+          placeholder="Description"
+          rows="3"
+          id="widgetDescription"
+        ></textarea>
+        <div class="form-actions">
+          <button class="btn btn-danger btn-sm" id="cancelForm">Cancel</button>
+          <button class="btn btn-success btn-sm" id="saveForm">Save</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Map Controls -->
+    <div class="map-controls">
+      <div class="map-btn" id="zoomIn"><i class="fas fa-plus"></i></div>
+      <div class="map-btn" id="zoomOut"><i class="fas fa-minus"></i></div>
+      <div class="map-btn" id="locateMe">
+        <i class="fas fa-location-arrow"></i>
+      </div>
+    </div>
+
+    <!-- Map Style Selector -->
+    <div class="map-style-selector">
+      <button class="style-btn active" data-style="standard">Standard</button>
+      <button class="style-btn" data-style="satellite">Satellite</button>
+      <button class="style-btn" data-style="dark">Dark</button>
+      <button class="style-btn" data-style="light">Light</button>
+    </div>
+
+    <!-- Notification Toast -->
+    <div class="notification-toast" id="notification">
+      <i class="fas fa-check-circle"></i>
+      <span id="notificationText">Operation completed successfully!</span>
+    </div>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // Initialize the map
+        const map = L.map("map", {
+          zoomControl: false,
+          attributionControl: false,
+        }).setView([30.0444, 31.2357], 13); // Default to Cairo coordinates
+
+        // Add different tile layers
+        const standard = L.tileLayer(
+          "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+          {
+            maxZoom: 19,
+          }
+        );
+
+        const satellite = L.tileLayer(
+          "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+          {
+            maxZoom: 19,
+          }
+        );
+
+        const dark = L.tileLayer(
+          "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",
+          {
+            maxZoom: 19,
+          }
+        );
+
+        const light = L.tileLayer(
+          "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+          {
+            maxZoom: 19,
+          }
+        );
+
+        // Add default layer
+        standard.addTo(map);
+
+        // Add a marker for the institute
+        const instituteMarker = L.marker([30.0444, 31.2357])
+          .addTo(map)
+          .bindPopup("<b>Information System Institute</b><br>Main Campus")
+          .openPopup();
+
+        // Add some sample markers
+        const markers = [
+          { lat: 30.042, lng: 31.23, title: "Branch Campus" },
+          { lat: 30.046, lng: 31.24, title: "Research Center" },
+          { lat: 30.04, lng: 31.245, title: "Student Hub" },
+        ];
+
+        markers.forEach((marker) => {
+          L.marker([marker.lat, marker.lng])
+            .addTo(map)
+            .bindPopup(`<b>${marker.title}</b>`);
+        });
+
+        // DOM Elements
+        const widgetPanel = document.getElementById("widgetPanel");
+        const widgetForm = document.getElementById("widgetForm");
+        const closePanel = document.getElementById("closePanel");
+        const closeForm = document.getElementById("closeForm");
+        const cancelBtn = document.getElementById("cancelForm");
+        const saveBtn = document.getElementById("saveForm");
+        const tabs = document.querySelectorAll(".tab");
+        const widgetButtons = document.querySelectorAll(".widget-btn");
+        const formTitle = document.getElementById("formTitle");
+        const notification = document.getElementById("notification");
+        const notificationText = document.getElementById("notificationText");
+        const zoomInBtn = document.getElementById("zoomIn");
+        const zoomOutBtn = document.getElementById("zoomOut");
+        const locateMeBtn = document.getElementById("locateMe");
+        const styleButtons = document.querySelectorAll(".style-btn");
+
+        // Widget data for dynamic content
+        const widgetData = {
+          1: { title: "Performance Metrics", icon: "chart-line" },
+          2: { title: "User Management", icon: "users" },
+          3: { title: "Notifications", icon: "bell" },
+          4: { title: "Calendar", icon: "calendar" },
+          5: { title: "Reports", icon: "file-alt" },
+        };
+
+        // Map layers object
+        const mapLayers = {
+          standard: standard,
+          satellite: satellite,
+          dark: dark,
+          light: light,
+        };
+
+        // Current map style
+        let currentStyle = "standard";
+
+        // Show notification function
+        function showNotification(message, isSuccess = true) {
+          notificationText.textContent = message;
+          notification.style.background = isSuccess
+            ? "var(--success)"
+            : "var(--danger)";
+          notification.classList.add("show");
+
+          setTimeout(() => {
+            notification.classList.remove("show");
+          }, 3000);
+        }
+
+        // Toggle widget panel
+        function toggleWidgetPanel() {
+          widgetPanel.classList.toggle("active");
+        }
+
+        // Show widget form with specific widget data
+        function showWidgetForm(widgetId) {
+          const data = widgetData[widgetId];
+          if (data) {
+            formTitle.textContent = `Configure ${data.title}`;
+            document.getElementById("widgetName").placeholder = data.title;
+          }
+          widgetForm.classList.add("active");
+        }
+
+        // Hide all overlays
+        function hideAllOverlays() {
+          widgetPanel.classList.remove("active");
+          widgetForm.classList.remove("active");
+        }
+
+        // Change map style
+        function changeMapStyle(style) {
+          mapLayers[currentStyle].remove();
+          mapLayers[style].addTo(map);
+          currentStyle = style;
+
+          // Update active button
+          styleButtons.forEach((btn) => {
+            if (btn.dataset.style === style) {
+              btn.classList.add("active");
+            } else {
+              btn.classList.remove("active");
+            }
+          });
+        }
+
+        // Event Listeners
+        tabs.forEach((tab) => {
+          tab.addEventListener("click", (e) => {
+            e.preventDefault();
+            tabs.forEach((t) => t.classList.remove("active"));
+            tab.classList.add("active");
+            toggleWidgetPanel();
+          });
+        });
+
+        widgetButtons.forEach((widget) => {
+          widget.addEventListener("click", () => {
+            const widgetId = widget.getAttribute("data-widget");
+            showWidgetForm(widgetId);
+          });
+        });
+
+        // Close buttons
+        closePanel.addEventListener("click", hideAllOverlays);
+        closeForm.addEventListener("click", hideAllOverlays);
+        cancelBtn.addEventListener("click", hideAllOverlays);
+
+        // Save form
+        saveBtn.addEventListener("click", () => {
+          const widgetName = document.getElementById("widgetName").value;
+          if (widgetName) {
+            showNotification(`"${widgetName}" widget saved successfully!`);
+            hideAllOverlays();
+          } else {
+            showNotification("Please enter a widget name", false);
+          }
+        });
+
+        // Map controls
+        zoomInBtn.addEventListener("click", () => {
+          map.zoomIn();
+        });
+
+        zoomOutBtn.addEventListener("click", () => {
+          map.zoomOut();
+        });
+
+        locateMeBtn.addEventListener("click", () => {
+          if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(
+              (position) => {
+                const { latitude, longitude } = position.coords;
+                map.setView([latitude, longitude], 15);
+                L.marker([latitude, longitude])
+                  .addTo(map)
+                  .bindPopup("Your location")
+                  .openPopup();
+              },
+              (error) => {
+                showNotification("Unable to get your location", false);
+              }
+            );
+          } else {
+            showNotification(
+              "Geolocation is not supported by your browser",
+              false
+            );
+          }
+        });
+
+        // Map style buttons
+        styleButtons.forEach((btn) => {
+          btn.addEventListener("click", () => {
+            changeMapStyle(btn.dataset.style);
+          });
+        });
+
+        // Close when clicking outside
+        document.addEventListener("click", (e) => {
+          if (
+            widgetPanel.classList.contains("active") &&
+            !widgetPanel.contains(e.target) &&
+            !e.target.classList.contains("tab")
+          ) {
+            widgetPanel.classList.remove("active");
+          }
+
+          if (
+            widgetForm.classList.contains("active") &&
+            !widgetForm.contains(e.target) &&
+            !e.target.classList.contains("widget-btn")
+          ) {
+            widgetForm.classList.remove("active");
+          }
+        });
+
+        // Keyboard shortcuts
+        document.addEventListener("keydown", (e) => {
+          if (e.key === "Escape") {
+            hideAllOverlays();
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

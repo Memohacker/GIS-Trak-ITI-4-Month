@@ -1,0 +1,122 @@
+// let betterUsername =prompt();
+
+// for (let i = 1; i <= 6; i++) {
+//             document.writeln(`<h${i}>${betterUsername}</h${i}>`);
+//         }
+
+
+// let a = Number(prompt("Enter first number:"));
+// let b = Number(prompt("Enter second number:"));
+// let c = Number(prompt("Enter third number:"));
+// let arr = [a, b, c];
+// let sum = a + b + c;
+// let avg = sum / 3;
+// document.body.innerHTML += '<h2>Sum: ' + sum + '</h2>';
+// document.body.innerHTML += '<h2>Average: ' + avg + '</h2>';
+
+
+// let myName = "Mohamed";
+// let numbers = [3, 4, 5];
+// let sum = numbers[0] + numbers[1] + numbers[2];
+// let isGreaterThanTen = sum > 10;
+// console.log(isGreaterThanTen);
+// document.writeln(isGreaterThanTen);
+
+// let number = 255.33335699;
+// number = number.toFixed(3);
+// console.log(number);
+
+// z = number.toString(2);
+// console.log(z);
+
+// let n = 1.33654;
+// b = n.toPrecision(5);
+// console.log(b);
+
+
+// let radius =5;
+// let area= Math.PI*radius*radius
+//  console.log(area);
+ 
+// let g=Math.round(1.9);
+// console.log(g);
+// let arr =[1,5,5,36,6]
+// console.log(`Min:${Math.min(...arr)} , Max :${Math.max(...arr)}`);
+
+// let random= Math.random()
+
+
+// for (let i = 0; i < 10; i++) {
+//   let rand = Math.random();
+//   let result = rand < 0.5 ? 'Hesham' : 'marwan';
+//   console.log(rand);
+  
+//   console.log(result);
+// }
+
+
+
+//Date Task
+
+// let date = new Date()
+ 
+// console.log(date.getMonth()+1);
+
+// console.log(date.getFullYear());
+
+
+// console.log(date.getDay());
+// console.log(date.toDateString());
+
+
+
+// //Timing Event
+
+//   function logTime() {
+//     console.log(new Date().toLocaleTimeString());
+//     setTimeout(logTime, 1000);
+//   }
+//   logTime();
+
+
+
+// // Create userProfile object without name, age, email
+// let userProfile = {
+//   username: "Mohamed",
+//   country: "Egypt",
+//   isActive: true
+// };
+
+// function printuser() {
+//   alert(
+//     `Username: ${userProfile.username}\nCountry: ${userProfile.country}\nActive: ${userProfile.isActive}`
+//   );
+// }
+
+
+// // Call the function to display user info
+// printuser();
+
+// Get current year, month, day
+
+// document.addEventListener('DOMContentLoaded', function() {
+//   const now = new Date();
+//   const year = now.getFullYear();
+//   const month = now.getMonth() + 1;
+//   const day = now.getDate();
+//   const dateElem = document.getElementById('dateDisplay');
+//   if (dateElem) {
+//     dateElem.textContent = `Year: ${year}, Month: ${month}, Day: ${day}`;
+//   }
+// });
+
+let count = 5;
+const timer = setInterval(function() {
+  document.getElementById('dateDisplay').textContent = 'Countdown: ' + count;
+  if (count === 0) {
+    clearInterval(timer);
+    window.alert("Time's up!");
+  }
+  count--;
+
+}, 1000);

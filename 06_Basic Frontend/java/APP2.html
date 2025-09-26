@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Information System Institute</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        font-family: "Inter", "Segoe UI", Roboto, sans-serif; /* ✅ Cleaner font stack */
+        overflow: hidden;
+      }
+
+      /* Replace map with full background image */
+      #map {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("mm.jpg");
+        background-size: cover;
+        background-position: center;
+        filter: brightness(0.85); /* Slight dark overlay for better contrast */
+        z-index: 1;
+      }
+
+      .top-bar {
+        position: relative;
+        width: 95%;
+        height: 60px;
+        margin: 10px auto;
+        background: rgba(43, 44, 46, 0.9);
+        border-radius: 16px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 20px;
+      }
+
+      .logo-section {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+      }
+
+      .logo {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #f0f0f0;
+      }
+
+      /* Center tabs */
+      .nav-tabs-custom {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        flex-grow: 1;
+      }
+
+      .nav-tabs-custom a {
+        position: relative;
+        font-size: 14px;
+        font-weight: 500;
+        color: #d1d5db;
+        text-decoration: none;
+        padding: 6px 12px;
+        transition: color 0.3s ease;
+      }
+
+      .nav-tabs-custom a::before {
+        content: "";
+        position: absolute;
+        top: -8px;
+        left: 0;
+        width: 0%;
+        height: 3px;
+        background-color: #e2f50be4;
+        border-radius: 3px;
+        transition: width 0.3s ease;
+      }
+
+      .nav-tabs-custom a:hover {
+        color: #eaeaea;
+      }
+
+      .nav-tabs-custom a:hover::before {
+        width: 100%;
+      }
+
+      /* USER SECTION */
+      .user-section {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: white;
+        font-weight: 500;
+      }
+
+      .user-photo {
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid #f59e0b;
+      }
+      .user-photo2 {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      /* WIDGET PANEL */
+      .widget-panel {
+        position: absolute;
+        top: 75px;
+        left: 16px;
+        bottom: 16px;
+        width: 12%;
+        background: rgba(33, 33, 33, 0.842);
+        border-radius: 16px;
+        display: none;
+        flex-direction: column;
+        padding: 15px;
+        z-index: 3;
+      }
+
+      .widget-list {
+        display: flex;
+        flex-direction: column;
+        gap: 59px;
+      }
+
+      .widget-btn {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        background: #444;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        padding: 20px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+      }
+
+      .widget-btn:hover {
+        background: #fbff00e6;
+      }
+
+      /* WIDGET FORM */
+      .widget-form {
+        position: absolute;
+        top: 75px;
+        left: calc(16px + 12% + 10px);
+        width: 23%;
+        background: #1f1f1f73;
+        color: white;
+        border-radius: 8px;
+        padding: 20px;
+        display: none;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+        z-index: 4;
+        bottom: 17px;
+        align-content: end;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+
+    <!-- Top Navigation Bar -->
+    <div class="top-bar">
+      <div class="logo-section">
+        <div class="logo">
+          <img src="images.png" alt="User Photo" class="user-photo2" />
+        </div>
+        <div class="text-white fw-bold">Information System Institute</div>
+      </div>
+
+      <div class="nav-tabs-custom">
+        <a href="#" class="tab" data-tab="1">Tab Name 01</a>
+        <a href="#" class="tab" data-tab="2">Tab Name 02</a>
+        <a href="#" class="tab" data-tab="3">Tab Name 03</a>
+        <a href="#" class="tab" data-tab="4">Tab Name 04</a>
+        <a href="#" class="tab" data-tab="5">Tab Name 05</a>
+      </div>
+
+      <!-- User Section -->
+      <div class="user-section">
+        <span>Mohamed Hesham</span>
+        <img src="1721255632971.png" alt="User Photo" class="user-photo" />
+      </div>
+    </div>
+
+    <!-- WIDGET PANEL -->
+    <div class="widget-panel" id="widgetPanel">
+      <div class="widget-list">
+        <button class="widget-btn" data-widget="1">Widget 1</button>
+        <button class="widget-btn" data-widget="2">Widget 2</button>
+        <button class="widget-btn" data-widget="3">Widget 3</button>
+        <button class="widget-btn" data-widget="4">Widget 4</button>
+        <button class="widget-btn" data-widget="5">Widget 5</button>
+      </div>
+    </div>
+
+    <!-- WIDGET FORM -->
+    <div class="widget-form" id="widgetForm">
+      <h6 class="fw-bold">Widget Form</h6>
+      <input
+        type="text"
+        class="form-control form-control-sm mb-2"
+        placeholder="Enter something"
+      />
+      <div class="d-flex justify-content-between">
+        <button class="btn btn-danger btn-sm" id="cancelForm">Cancel</button>
+        <button class="btn btn-success btn-sm">Save</button>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const widgetPanel = document.getElementById("widgetPanel");
+        const widgetForm = document.getElementById("widgetForm");
+        const cancelBtn = document.getElementById("cancelForm");
+
+        // Show widget panel when tab clicked
+        document.querySelectorAll(".tab").forEach((tab) => {
+          tab.addEventListener("click", (e) => {
+            e.preventDefault();
+            widgetPanel.style.display = "flex";
+          });
+        });
+
+        // Show form when widget clicked
+        document.querySelectorAll(".widget-btn").forEach((widget) => {
+          widget.addEventListener("click", () => {
+            widgetForm.style.display = "block";
+          });
+        });
+
+        // Hide form when cancel clicked
+        cancelBtn.addEventListener("click", () => {
+          widgetForm.style.display = "none";
+        });
+      });
+    </script>
+  </body>
+</html>
