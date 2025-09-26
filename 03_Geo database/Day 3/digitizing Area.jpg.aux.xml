@@ -1,0 +1,49 @@
+<PAMDataset>
+  <Metadata domain="IMAGE_STRUCTURE">
+    <MDI key="COMPRESSION">JPEG</MDI>
+    <MDI key="INTERLEAVE">PIXEL</MDI>
+    <MDI key="SOURCE_COLOR_SPACE">YCbCr</MDI>
+  </Metadata>
+  <Metadata domain="xml:ESRI" format="xml">
+    <GeodataXform xsi:type="typens:PolynomialXform" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:typens="http://www.esri.com/schemas/ArcGIS/2.6.0">
+      <PolynomialOrder>1</PolynomialOrder>
+      <SpatialReference xsi:type="typens:ProjectedCoordinateSystem">
+        <WKT>PROJCS["Egypt_Red_Belt",GEOGCS["GCS_Egypt_1907",DATUM["D_Egypt_1907",SPHEROID["Helmert_1906",6378200.0,298.3]],PRIMEM["Greenwich",0.0],UNIT["Degree",0.0174532925199433]],PROJECTION["Transverse_Mercator"],PARAMETER["False_Easting",615000.0],PARAMETER["False_Northing",810000.0],PARAMETER["Central_Meridian",31.0],PARAMETER["Scale_Factor",1.0],PARAMETER["Latitude_Of_Origin",30.0],UNIT["Meter",1.0],AUTHORITY["EPSG",22992]]</WKT>
+        <XOrigin>-5008200</XOrigin>
+        <YOrigin>-12512400</YOrigin>
+        <XYScale>450258654.53977805</XYScale>
+        <ZOrigin>-100000</ZOrigin>
+        <ZScale>10000</ZScale>
+        <MOrigin>-100000</MOrigin>
+        <MScale>10000</MScale>
+        <XYTolerance>0.001</XYTolerance>
+        <ZTolerance>0.001</ZTolerance>
+        <MTolerance>0.001</MTolerance>
+        <HighPrecision>true</HighPrecision>
+        <WKID>22992</WKID>
+        <LatestWKID>22992</LatestWKID>
+      </SpatialReference>
+      <CoeffX xsi:type="typens:ArrayOfDouble">
+        <Double>649723.97630092804</Double>
+        <Double>0.17295664352060797</Double>
+        <Double>-0.1880979262236466</Double>
+      </CoeffX>
+      <CoeffY xsi:type="typens:ArrayOfDouble">
+        <Double>821539.96940871817</Double>
+        <Double>0.1880979262236466</Double>
+        <Double>0.17295664352060797</Double>
+      </CoeffY>
+      <InverseCoeffX xsi:type="typens:ArrayOfDouble">
+        <Double>-4087674.9526311154</Double>
+        <Double>2.6488566168874437</Double>
+        <Double>2.8807476044766456</Double>
+      </InverseCoeffX>
+      <InverseCoeffY xsi:type="typens:ArrayOfDouble">
+        <Double>-304450.79570585198</Double>
+        <Double>-2.8807476044766451</Double>
+        <Double>2.6488566168874437</Double>
+      </InverseCoeffY>
+      <Name />
+    </GeodataXform>
+  </Metadata>
+</PAMDataset>
