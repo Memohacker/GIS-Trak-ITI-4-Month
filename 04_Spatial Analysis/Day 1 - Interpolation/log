@@ -1,0 +1,5 @@
+20250806 930   0     0     0ITI149 C:\Users\iti149\Desktop\Mohamed Hesham\New Folder\New Folder\pow2 = IDW(Samples,  'OZONE', #, 2.0, SAMPLE, 12, #, 3414.624767600
+20250806 943   0     0     0ITI149 C:\Users\iti149\Desktop\Mohamed Hesham\New Folder\New Folder\pow4 = IDW(Samples,  'ELEVATION', #, 4.0, SAMPLE, 12, #, 3652.27082
+20250806 950   0     1     0ITI149 C:\Users\iti149\Desktop\Mohamed Hesham\New Folder\New Folder\spline = SPLINE(Samples,  'OZONE', REGULARIZED, 0.10000000000000001
+20250806 951   0     1     0ITI149 C:\Users\iti149\Desktop\Mohamed Hesham\New Folder\New Folder\spline1 = SPLINE(Samples,  'OZONE', REGULARIZED, 0.1000000000000000
+20250806 952   0     1     0ITI149 C:\Users\iti149\Desktop\Mohamed Hesham\New Folder\New Folder\splinetension = SPLINE(Samples,  'OZONE', TENSION, 0.10000000000000
