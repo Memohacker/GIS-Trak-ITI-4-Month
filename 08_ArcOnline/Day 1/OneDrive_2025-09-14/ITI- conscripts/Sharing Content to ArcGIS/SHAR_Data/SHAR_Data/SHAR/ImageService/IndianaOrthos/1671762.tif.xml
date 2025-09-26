@@ -1,0 +1,96 @@
+<metadata xml:lang="en"><Esri><CreaDate>20130805</CreaDate><CreaTime>07522900</CreaTime><SyncOnce>FALSE</SyncOnce><DataProperties><itemProps><itemLocation><linkage Sync="TRUE">file://\\Rushmore\EdContent\Courses\IL\ARC4\Data_Working\Student\ARC4\ImageService\IndianaOrthos\1671762.tif</linkage><protocol Sync="TRUE">Local Area Network</protocol></itemLocation><itemName Sync="TRUE">1671762.tif</itemName><imsContentType Sync="TRUE">002</imsContentType><nativeExtBox><westBL Sync="TRUE">167500.000000</westBL><eastBL Sync="TRUE">170000.000000</eastBL><southBL Sync="TRUE">1762500.000000</southBL><northBL Sync="TRUE">1765000.000000</northBL><exTypeCode Sync="TRUE">1</exTypeCode></nativeExtBox></itemProps><copyHistory><copy source="C:\Users\Student\Desktop\2009tif\1671762.tif" dest="withheld" date="20130805" time="07522900"/></copyHistory><coordRef><type Sync="TRUE">Projected</type><geogcsn Sync="TRUE">GCS_North_American_1983</geogcsn><csUnits Sync="TRUE">Linear Unit: Foot_US (0.304801)</csUnits><projcsn Sync="TRUE">NAD_1983_StatePlane_Indiana_East_FIPS_1301_Feet</projcsn><peXml Sync="TRUE">&lt;ProjectedCoordinateSystem xsi:type='typens:ProjectedCoordinateSystem' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xs='http://www.w3.org/2001/XMLSchema' xmlns:typens='http://www.esri.com/schemas/ArcGIS/10.1'&gt;&lt;WKT&gt;PROJCS[&amp;quot;NAD_1983_StatePlane_Indiana_East_FIPS_1301_Feet&amp;quot;,GEOGCS[&amp;quot;GCS_North_American_1983&amp;quot;,DATUM[&amp;quot;D_North_American_1983&amp;quot;,SPHEROID[&amp;quot;GRS_1980&amp;quot;,6378137.0,298.257222101]],PRIMEM[&amp;quot;Greenwich&amp;quot;,0.0],UNIT[&amp;quot;Degree&amp;quot;,0.0174532925199433]],PROJECTION[&amp;quot;Transverse_Mercator&amp;quot;],PARAMETER[&amp;quot;False_Easting&amp;quot;,328083.3333333333],PARAMETER[&amp;quot;False_Northing&amp;quot;,820208.3333333333],PARAMETER[&amp;quot;Central_Meridian&amp;quot;,-85.66666666666667],PARAMETER[&amp;quot;Scale_Factor&amp;quot;,0.9999666666666667],PARAMETER[&amp;quot;Latitude_Of_Origin&amp;quot;,37.5],UNIT[&amp;quot;Foot_US&amp;quot;,0.3048006096012192],AUTHORITY[&amp;quot;EPSG&amp;quot;,2965]]&lt;/WKT&gt;&lt;XOrigin&gt;-18119800&lt;/XOrigin&gt;&lt;YOrigin&gt;-45615400&lt;/YOrigin&gt;&lt;XYScale&gt;137246076.82899535&lt;/XYScale&gt;&lt;ZOrigin&gt;-100000&lt;/ZOrigin&gt;&lt;ZScale&gt;10000&lt;/ZScale&gt;&lt;MOrigin&gt;-100000&lt;/MOrigin&gt;&lt;MScale&gt;10000&lt;/MScale&gt;&lt;XYTolerance&gt;0.0032808333333333331&lt;/XYTolerance&gt;&lt;ZTolerance&gt;0.001&lt;/ZTolerance&gt;&lt;MTolerance&gt;0.001&lt;/MTolerance&gt;&lt;HighPrecision&gt;true&lt;/HighPrecision&gt;&lt;WKID&gt;2244&lt;/WKID&gt;&lt;LatestWKID&gt;2965&lt;/LatestWKID&gt;&lt;/ProjectedCoordinateSystem&gt;</peXml></coordRef><RasterProperties><General><PixelDepth Sync="TRUE">8</PixelDepth><HasColormap Sync="TRUE">FALSE</HasColormap><CompressionType Sync="TRUE">YCbCr JPEG</CompressionType><NumBands Sync="TRUE">3</NumBands><Format Sync="TRUE">TIFF</Format><HasPyramids Sync="TRUE">TRUE</HasPyramids><SourceType Sync="TRUE">continuous</SourceType><PixelType Sync="TRUE">unsigned integer</PixelType><NoDataValue Sync="TRUE"></NoDataValue></General></RasterProperties></DataProperties><SyncDate>20141114</SyncDate><SyncTime>08182900</SyncTime><ModDate>20141114</ModDate><ModTime>08182900</ModTime><scaleRange><minScale>150000000</minScale><maxScale>5000</maxScale></scaleRange><ArcGISProfile>ISO19139</ArcGISProfile><ArcGISFormat>1.0</ArcGISFormat></Esri><dataIdInfo><resConst xmlns:esri="http://www.esri.com/metadata/"><Consts><useLimit>	Use of this Data is restricted to training, demonstration, and educational purposes only. This Data cannot be sold or used for marketing without the express written consent of Environmental Systems Research Institute Inc.
+	THE DATA AND RELATED MATERIALS MAY CONTAIN SOME NONCONFORMITIES, DEFECTS, OR ERRORS. ESRI DOES NOT WARRANT THAT THE DATA WILL MEET USER'S NEEDS OR EXPECTATIONS; THAT THE USE OF THE DATA WILL BE UNINTERRUPTED; OR THAT ALL NONCONFORMITIES, DEFECTS, OR ERRORS CAN OR WILL BE CORRECTED. ESRI IS NOT INVITING RELIANCE ON THIS DATA, AND THE USER SHOULD ALWAYS VERIFY ACTUAL DATA.
+	THE DATA AND RELATED MATERIALS ARE PROVIDED "AS-IS" WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+	IN NO EVENT SHALL ESRI AND/OR ITS LICENSOR(S) BE LIABLE FOR COSTS OF PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOST PROFITS, LOST SALES, OR BUSINESS EXPENDITURES, INVESTMENTS, OR COMMITMENTS IN CONNECTION WITH ANY BUSINESS; LOSS OF ANY GOODWILL; OR FOR ANY INDIRECT, SPECIAL, INCIDENTAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES ARISING OUT OF THIS AGREEMENT OR USE OF THE DATA AND RELATED MATERIALS, HOWEVER CAUSED, ON ANY THEORY OF LIABILITY, AND WHETHER OR NOT ESRI OR ITS LICENSOR(S) HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. THESE LIMITATIONS SHALL APPLY NOTWITHSTANDING ANY FAILURE OF ESSENTIAL PURPOSE OF ANY EXCLUSIVE REMEDY.
+	In the event that the data vendor(s) has (have) granted the end user permission to redistribute the Geodata, please use proper proprietary or copyright attribution for the various data vendor(s), and provide the associated metadata file(s) with the Geodata.</useLimit></Consts></resConst><envirDesc Sync="TRUE">Microsoft Windows 7 Version 6.1 (Build 7601) Service Pack 1; Esri ArcGIS 10.2.0.3348</envirDesc><dataLang><languageCode value="eng" Sync="TRUE"/><countryCode value="USA" Sync="TRUE"/></dataLang><idCitation><resTitle Sync="TRUE">1671762.tif</resTitle><presForm><PresFormCd value="005" Sync="TRUE"/></presForm></idCitation><spatRpType><SpatRepTypCd value="002" Sync="TRUE"/></spatRpType><dataExt><geoEle><GeoBndBox esriExtentType="search"><exTypeCode Sync="TRUE">1</exTypeCode><westBL Sync="TRUE">-86.240640</westBL><eastBL Sync="TRUE">-86.231648</eastBL><northBL Sync="TRUE">40.092788</northBL><southBL Sync="TRUE">40.085882</southBL></GeoBndBox></geoEle></dataExt><searchKeys><keyword>Esri Training Services</keyword><keyword>ARC4</keyword></searchKeys><idPurp>This data was obtained from Hamilton County, Indiana. This data should not be used for any purpose other than that for which it was intended.</idPurp><idAbs>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;2009 TIF image.&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;</idAbs><idCredit>Hamilton County, Indiana.</idCredit><resConst xmlns:esri="http://www.esri.com/metadata/"><Consts><useLimit>	Use of this Data is restricted to training, demonstration, and educational purposes only. This Data cannot be sold or used for marketing without the express written consent of Environmental Systems Research Institute Inc.
+	THE DATA AND RELATED MATERIALS MAY CONTAIN SOME NONCONFORMITIES, DEFECTS, OR ERRORS. ESRI DOES NOT WARRANT THAT THE DATA WILL MEET USER'S NEEDS OR EXPECTATIONS; THAT THE USE OF THE DATA WILL BE UNINTERRUPTED; OR THAT ALL NONCONFORMITIES, DEFECTS, OR ERRORS CAN OR WILL BE CORRECTED. ESRI IS NOT INVITING RELIANCE ON THIS DATA, AND THE USER SHOULD ALWAYS VERIFY ACTUAL DATA.
+	THE DATA AND RELATED MATERIALS ARE PROVIDED "AS-IS" WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+	IN NO EVENT SHALL ESRI AND/OR ITS LICENSOR(S) BE LIABLE FOR COSTS OF PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOST PROFITS, LOST SALES, OR BUSINESS EXPENDITURES, INVESTMENTS, OR COMMITMENTS IN CONNECTION WITH ANY BUSINESS; LOSS OF ANY GOODWILL; OR FOR ANY INDIRECT, SPECIAL, INCIDENTAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES ARISING OUT OF THIS AGREEMENT OR USE OF THE DATA AND RELATED MATERIALS, HOWEVER CAUSED, ON ANY THEORY OF LIABILITY, AND WHETHER OR NOT ESRI OR ITS LICENSOR(S) HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. THESE LIMITATIONS SHALL APPLY NOTWITHSTANDING ANY FAILURE OF ESSENTIAL PURPOSE OF ANY EXCLUSIVE REMEDY.
+	In the event that the data vendor(s) has (have) granted the end user permission to redistribute the Geodata, please use proper proprietary or copyright attribution for the various data vendor(s), and provide the associated metadata file(s) with the Geodata.</useLimit></Consts></resConst></dataIdInfo><mdLang><languageCode value="eng" Sync="TRUE"/><countryCode value="USA" Sync="TRUE"/></mdLang><distInfo><distFormat><formatName Sync="TRUE">Raster Dataset</formatName></distFormat></distInfo><mdHrLv><ScopeCd value="005" Sync="TRUE"/></mdHrLv><mdHrLvName Sync="TRUE">dataset</mdHrLvName><refSysInfo><RefSystem><refSysID><identCode code="2965" Sync="TRUE"/><idCodeSpace Sync="TRUE">EPSG</idCodeSpace><idVersion Sync="TRUE">8.1.1</idVersion></refSysID></RefSystem></refSysInfo><spatRepInfo><Georect><cellGeo><CellGeoCd Sync="TRUE" value="002"/></cellGeo><numDims Sync="TRUE">2</numDims><tranParaAv Sync="TRUE">1</tranParaAv><chkPtAv Sync="TRUE">0</chkPtAv><cornerPts><pos Sync="TRUE">167500.000000 1762500.000000</pos></cornerPts><cornerPts><pos Sync="TRUE">167500.000000 1765000.000000</pos></cornerPts><cornerPts><pos Sync="TRUE">170000.000000 1765000.000000</pos></cornerPts><cornerPts><pos Sync="TRUE">170000.000000 1762500.000000</pos></cornerPts><centerPt><pos Sync="TRUE">168750.000000 1763750.000000</pos></centerPt><axisDimension type="002"><dimSize Sync="TRUE">5000</dimSize><dimResol><value Sync="TRUE" uom="Foot_US">0.500000</value></dimResol></axisDimension><axisDimension type="001"><dimSize Sync="TRUE">5000</dimSize><dimResol><value Sync="TRUE" uom="Foot_US">0.500000</value></dimResol></axisDimension><ptInPixel><PixOrientCd Sync="TRUE" value="001"/></ptInPixel></Georect></spatRepInfo><contInfo><ImgDesc><contentTyp><ContentTypCd Sync="TRUE" value="001"/></contentTyp><covDim><Band><dimDescrp Sync="TRUE">Band_1</dimDescrp><bitsPerVal Sync="TRUE">8</bitsPerVal><valUnit><UOM type="length"/></valUnit></Band><Band><dimDescrp Sync="TRUE">Band_2</dimDescrp><bitsPerVal Sync="TRUE">8</bitsPerVal><valUnit><UOM type="length"/></valUnit></Band><Band><dimDescrp Sync="TRUE">Band_3</dimDescrp><bitsPerVal Sync="TRUE">8</bitsPerVal><valUnit><UOM type="length"/></valUnit></Band></covDim></ImgDesc></contInfo><mdDateSt Sync="TRUE">20141114</mdDateSt><mdChar><CharSetCd value="005" Sync="TRUE"/></mdChar><mdContact xmlns:esri="http://www.esri.com/metadata/"><rpOrgName>Environmental Systems Research Institute, Inc. (Esri)</rpOrgName><rpCntInfo><cntAddress><delPoint>380 New York Street</delPoint><city>Redlands</city><adminArea>California</adminArea><postCode>92373-8100</postCode><country>USA</country><eMailAdd>info@esri.com</eMailAdd></cntAddress><cntPhone><voiceNum>909-793-2853</voiceNum><faxNum>909-793-5953</faxNum></cntPhone><cntOnlineRes><linkage>http://www.esri.com/about-esri/contact.html</linkage></cntOnlineRes><cntInstr>In the United States, please direct all inquiries regarding software/data pricing and consulting services to your local Esri Regional Office.  For support, you may contact Technical Support by telephone (voice) between 6:00 a.m. and 6:00 p.m. Pacific time, Monday through Friday, by dialing 909-793-3774; facsimile (fax) available at 909-792-0960; electronic mail (e-mail) support@esri.com; or visit http://support.esri.com; Esri holidays excluded. Outside the United States, please direct all inquiries regarding software/data pricing, sales, support, and consulting services to your local Esri International Distributor.  This information can be found at http://www.esri.com/about-esri/locations.html.</cntInstr><cntHours>8:00 a.m.-5:00 p.m. Pacific time, Monday-Friday</cntHours></rpCntInfo><role><RoleCd value="005"/></role></mdContact><Binary><Thumbnail><Data EsriPropertyType="PictureX">/9j/4AAQSkZJRgABAQEAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0a
+HBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIy
+MjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCACFAMgDASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+iii
+gAooooARmCqWPAAyawJ/G/h22iaSXUMIvUiCQ4/Ja3LgE20oX7xQ4+uK+ede0nVI7xRfxNHFLllW
+NlxnPIOD6c1LbQdD2aDx74auTiHUGY/9e0v/AMTT/wDhOfDglMZ1HDAkEGCTqP8AgNeQadGLO2Kx
+W8rHpyw6/nWvNBGIUk8lQ4ZiCeCee9Sp6lwjzHpEvjjw7Cyq9+wLdMW8pz+S1DL8QvC8DbZdSKH3
+tpf/AImvOrSa3vJsMhDRngZz/Wq3iKOL7PvdMkcfe/8AsqOfWxbpK2h6Z/wsbwntz/a6494JP/ia
+T/hZHhLj/ibdef8Aj2l/+JrxSC0tUaOSVfkbn7+P/Zq6WwjiErJZyqFZPmwckfN9abnYSpnqMXjT
+w/Pjy9Qznp+5kH/stWh4k0kgkXR4/wCmT/4V5o1ri33mQ42EhsdP1qLQbkXL3EUj5eHrkc9vep52
+9i/ZI9Jn8X6FbIzTXpVVGSfIkOPyWli8XaHMm+O9LL7Qyf8AxNeSa1fkRvDhi7vtG7pgVf02aC40
+gSJwyHy3XPRvw7H/ABpuTsL2UbnpNx4z8P2gBnv9m7p+5kOfyX2oi8aeH58+Xf5x6wyD+a14/Naz
+y3gYxmTkkBuMVq2mnRyELgRuPvIy/rTcmkCpI9Qm8V6JbxGWW9KoBnPkuf5LRD4q0WePfHeErjOf
+KccfiK4STSla3IfBP0NILOFIVARWUdAScCodR2K9jE9UVgyhhyCMilqOD/UR4/uj+VSVscwUUUUA
+FFFFABRRRQAUUUUAQ3f/AB5z84/dtz+FfP19qNi99HFaTu6jDDe+doyBwcnrz1r6CuP+PWXv8h/l
+XhDQzPe+a9uXOBswF447c1nN2E27WRraXZLHI8j3cKhVO0HBx3z19qp+IdTltLPz4Z1VFXcwYEYU
+456g0yWe8huLdDaXJMsnloIjGMnBOMs47Cs3xNHLPo8l6nkwtFGRLAYBJI4Pqx4Q4Pb8zUxi+pUZ
+uN0jPXxdYWfl3TXqkscMoBzn6bs1au/G+lXU8ED3DISR8jRMM579envXLwxafJGnz72IYACMKduQ
+MdwfzqO2jT7fOksrIwQusbjeTx259jn/ACa1cImiqSOr1LxZo0lj5MU5SYfwGBgT9DnB/Oo/Dl1c
+X0c08RbcIwGV4yhUbu+e5P8AKsGwjeTS1u2T902QUaQkls9jjIP8j6Diuz8FjfZ36IhCeWpwQAQd
+2Mfr/ntLiooqLcnqbWnXJltWjlKn5fuk1W1K3i0+K6voXKS7PmweDwKmaE/ZgyrlwSpYHnHFUdSs
+nvblrd52EW3JC96has1ehjFrvVDbTsqckkIq4z6n+VbemafJZlxJgO3BGOMc1W01orS8tWm+WNVK
+8dBnGP5V1oSC5KyrKpUnnnj8KqbaWgo92TWWngruIDkJU1zBbpakzqAqLuJI6Cn2xhgJaM9V9ap6
+oWlSNGPyuQDj0qEUV4L8yWGzy3LgZyRTbOR2XZJjd3BrShVUIhQfLgYaoJYRFItxEN2OG96W4z0e
+H/UR/wC6P5U+mRHMKH/ZFProOEKKKKACiiigAooooAKKKKAIrj/j1l/3D/KvF3j3OjKCAhz09q9o
+uBm1lH+wf5V5QNELRbjdSdOQNp7VnNXDlb2K7G2maM3OSIpBIFb7j4B4Ydxz/Kq/ia+jj0K8aKOL
+/VElsDqPTkVau/DoniYLeNg464B/lWL4g0GK20G6a51FvK2fxc+nHA4qLS2HySONhXzFtma3V4Gy
+7MGDE7mHYE8j/PXiNFjlnYWvzLINkfmEZBUjOMYI6jtnjk8itGbyobC1mshDMwKIzAgMQDnHJ7Ds
+f1qvJG73US/Y9iknc0cY3ZHrjqDx09ea3bKS0sXYorARxWzb2SBF3jH3c89G56+2fbiun8Gvj7Us
+sh8nZtTIwRhsc55PT+dcfZTytbyD7O8irlQkwbu38TY5GDxntxXW+F7RvMmjaQSmNF2MMHaoPQnr
+2rOe1zWFro6O3hP2eaQ/6sggZ7mubN3nWpueAmPpXUyZOmui/wACt7c1xUUL/wBrynnlR/KpgaSN
+ZLXzQhC9CMY9q0hp0LwN5XmJIpPKuRzUtrCi2scqkAkVq2sarBgqOTk47029QS0M7TXMlrIJWx5b
+YP4GpbyVpYFKptwwAOe1UL26OlXEjGHzYnGSnTmrcN4t6MRr8g/lSa1uNFiyncgDBIUCrizK4Pcd
+CTxiqyyCzQfLuLA0srKkYlH3WX5vrUtjPRIv9Un+6KfTITmCM+qj+VProOEKKKKACiiigAooooAK
+KKKAIrj/AI9Zf9w/yrzKxne50pGRsuNoIPrxXp0//HvJj+6f5V5VFa3EA3QvnPLqDxn8amRpT3NQ
+K8i5kRN2Ouee9Y/iDSl1PSbi0d1XcuQzDgEYOf0rRiusxMZt0L4xl1IUfjVo+VdQbgyyIVwSp4P0
+xU3sa2ueNPYyS6WrySK9ujgLcH5QeCCDnGRzx3GOtEkt9b27R215Fy4SQFQ3JGc7cZPHQg+tdTqW
+jafNMkEW7zQpVl3HlQBgnHU9OvpUOi+DJNbkt7aCxNvbqxlLzhl2gEA7cgZzkkAE9844zSkmcntN
+WkYtgbXT9Pe7uzOjRf6uNuOcdQvAPY9/611XhW4t1eSC1zmNxu3LgsrZ68e4PFWtP8MwzlNKubO4
+tbZd5/eTKApUlSyowJOSM+4NXk8HDwrqIlbUZbxrqPJaQY2bWXgDOB1HT0FE9nc1py1RZuSRZxqn
+BcnvVO200G8LAZIGM96nVGkRjgkR5IB61LYMzzFhnII7dOTWN7I6rDrW3xZEH5irkCrTz+S0SZO4
+k5A7Uwl0WUwEBnyQpqhp4mhIku8sxPX86fW4DtW2k/OAWZaXT0WIFgAB3JpmpE3MreUDsUYz6mi0
+nKwFfL3HHNNvQEtTRnnj3gOgYbcjFVXfzISmMLycZ9aSMK55fBIz9KfbsoV2cZVc/wBazbZR6ZAM
+W8Q/2B/KpKZCcwRn/ZH8qfXUcAUUUUAFFFFABRRRQAUUUUAMl/1L/wC6a8/t4cxkFcggZBr0Cb/U
+yf7prgIbhVTDZHGKmRrT6iTLGiEOpH0qFxFCh2o3mHqUOCfrVidDLARHyOhz1qeNQULgAvt2g1n1
+NuhwsN8LWZotQO2GKTKydcZyfmABPsCO/pWlb3UN5fIkcZkPltJhXyV77WI4BPUc545FVNYihgEU
+U6RCa6mwRKp27W6HjqM4X2Jqj4dgkt9XaRUXy0Mkqlc/MoifBXPUHbTST1OX2aSbZp2xsrGe3kS1
+RdhIG3GUOME9cfl6V1msa1p2tXMB065SbYjqcAjGWA7j/ZPPtXnsMgv1cMCS78Ae9aGi240i+EZX
+aCrfe6kA96iL0aJov3kjZjd9rbDgq33h0qdpUhmYKpAblh781TZ3jhdmA+duCO5OaotqBe4kQc7S
+Rn86Wp3m0bpVCNHtPUEd8U+c77TzEUj2I71iRSAMpJO7njt1rVhDPZEbmOexNHUBypiAJxuK5Ptz
+/wDXqCSEiUlV2uD27iiYus4UqQGXk/jUke6RwR8zDI/D1pt2AbDAS5OOQOc9quLbSm3O9l+cdMdK
+iVdsO12wSMM3pUM17JHGQTwmRUvuM9Qh4hjH+yKfUcBzbxH1QfyqSuo4AooooAKKKKACiiigAooo
+oAjuG220reiE/pXkw1218oygqQOo2jn2HNerXn/Hjcf9c2/lXgWmecsUn+rGELneSASBnAwOpqZX
+6FwbR0I8a6codfJuODtIWMdfzqzB4vsIrbdsmKk8ZUZ/nXDBUZSVIDHPHqak0yJWlJkfy2XoueKm
+xrdm3rd3Fquo2kEiTTW0SxsAVwFbgnHuemTnjp61e0+7+13ybztkWGVMdORG2PwxmqLM6oBGoLGP
+uegxTtHFxPq0cjsoUJLhQec+U1LcTVosw2s7+yuWe2UbkZtwzxn1FbukXDaliW5ISWONgV444/8A
+rVHdXzRu8UKBlbdksT37fhVJrk2ERlhVSJAAwI6jmoWrsc1L4jcvoZXtlC3LRkHPBxnk0y3tlTcA
+eUJJY8+tKfNmgjc9AwHuRgmrNvA7mQBshs/1od9j0EVrnCFHAwCp5B9CKuaPKJFw7kbhgDPWqWqM
+kUEQ64Ug84qWzkMVpAywFuTyGzgYFO2grm2BvV4gVYohwx7VTX/RpCQM9iaWO7V0Yxqyl+pPpVa4
+hUfvCzNk5Pze1TbuUizPL5lsEOSSCRjj1pt4irHMccnP9ajC/u42YYUrwfxNJeF0jkJbIAJ+vepb
+u7AerW3/AB6w/wC4v8qlqK2/49Yf9xf5VLXWcAUUUUAFFFFABRRRQAUUUUARXILWswAyShH6V4vH
+ot88MqfZSGxwNw5/Wva5P9U/0NcU5ZoWXYBuXjbUTNaa3PN08M6p9oIGnE5B5DDr9M1FFoGqCGTz
+7HY+4qo3DJHSvR7GcQMQVYADJbFN1AKsEjqRkncp+pqU7o0aOT1HZZabNMwCNGu05PPArm/BM9xd
+a5I++QRPbzuhPOP3bDp+NXPFcNxcwExlgmTuUd6oeBpZotfkglyPLt5R06fLj+tVH4WRUfQ0rFr6
+5ncHncSSQg6d+1RapZTrGjb1KAo2FA4BUntXRWEPkSwwMwEc0ZweO4weT71RjtmX7RbyYMiNg855
+wayTtIiEddCXRbzyFRHPmq3GACT9MVcl1CGAOkET+a3HIx35rOtEEVwwVduSASK1BbidN4KiVf1q
+3a50pOxENNLQLNcfOxxtXHArRs4GigD9Y+ePwFMiM0YSN2xkdPUCrE58nRpEGd+D834VL1Yyqhiu
+LRSijPIPbt/jSRsrb45FOB396oaNMW0+RSSZE4Pt1q6NzAqp9z+tTLRlJ6DkEk0SoFOEU9uDyaTU
+4tsEgJ27gMCmxTyrlUk+UA/nUkFsbzzGmG4gcH8aFoB6jbDFrCPRF/lUtMhGIIx6KP5U+uk4Aooo
+oAKKKKACiiigAooooAbJ/qn/AN01whnEIzuYj0ArupQTC4HXacVyLWFw9sB9mm8zbyfKI5/Kpka0
+ra3M2IfaJCFBA9Mirs8W+0COMkLj6U2CwvoYCRaTb8Ef6s5/lVua0uxbqpgmd9oBIQ9fyrNI1bRw
+1/brKsnGAHOefrTNOs7Zbt5YVEZEEhYg5Jq7PpWq+XcZ0y9OSx+WFj69OKyfB+j60mu35n0vU47d
+7ZgpubZ1G7I4GR16/lRFMmpJWLU04tZNKkSQSogber8gd8VSXV7S2F7cTfIxZsp17Hp+ddHb+Ebm
+UWKSwXKOZC0jFWwoIPH8q5bxf4J1l4Y47OxupnEj7mjhZgemO3SlCN3qZJtaj9Iv47+Z3U4XcO31
+rdjXK4+6w7isDQPCet28/wA+n30SkgkmBh/MV08GjalEh3Wd0x2kDMLdfyomtdDojLTUT7PM7o7E
+kjGPzFR6xfR2OnohbdJLkBfXAH+NX71b+ytUcaZfStlVIhtnc84HQDpz+VYGqWWoXl2Hi0TU2EQM
+YLWcg+bOSenI9D0pqISmjP0mR9s5BI5HGcZ61roJnidshRjnHWsWT+1bRiU8O63IxwPl0yUj+XvW
+tpJ1e5kAl0PVIs8HzbGRB+o9v85FE0+iHGS7mjaWXmeW7HAAzjNaTyQ2kBYsFQLk1LbWF6FYmzuA
+cYGYm9PpWD4p0rV5bVYbWwvZCx+bZAx/kKmMW9xuSPWISGgjYdCoI/Kn1DaKUs4FYEMI1BB+lTV0
+HEFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQ
+AUUUUAf/2Q==</Data></Thumbnail></Binary></metadata>

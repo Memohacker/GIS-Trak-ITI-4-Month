@@ -1,0 +1,185 @@
+Identification_Information:
+	Citation:
+		Citation_Information:
+			Originator: Hamilton County
+			Publication_Date: 20091229
+			Title: Orthophotography of Hamilton County Indiana (color 6-in resolution, Indiana State Plane East, 2009 Version, TIFF Files)
+			Edition: 1
+			Geospatial_Data_Presentation_Form: Raster Digital Data
+			Publication_Information:
+				Publication_Place: Noblesville, IN
+				Publisher: Hamilton County, Indiana
+			Online_Linkage: http://hamiltoncounty.in.gov
+	Description:
+		Abstract:
+			The Hamilton County 2009 digital natural-color orthophotography
+			was collected on March 30 during leaf-off conditions at a
+			resolution of 6-inch resolution. The data cover the entire land 
+                        area of Hamilton County, Indiana, or 434 square miles. Data
+			are delivered tiles, consisting of 2500'x 2500'
+			uncompressed 24-bit natural color TIFF files.  Accuracy is
+			+/- 2.50 feet. The entire perimeter of the county is buffered 
+                        by at least 2,000 feet. Adjacent flight lines overlap by a 
+                        minimum of 30 percent.  Imagery was collected with the 
+                        Z/I Imaging DMC digital sensor.  The file naming 
+                        convention is as follows: xxxyyyy where xxx and yyyy represent 
+                        the easting and northing coordinates (respectively) in state 
+                        plane feet, divided by 1000, of the tile origin (the bottom-left 
+                        pixel).  TIFF files are approximately 75 MB in size.  Ownership 
+                        of the data products resides with Hamilton County.
+		Purpose:
+			Hamilton County acquires orthophotography frequently because
+                        of its high growth rate.
+	Time_Period_of_Content:
+		Time_Period_Information:
+			Single_Date/Time:
+				Calendar_Date: 20091229
+		Currentness_Reference: Publication Date
+	Status:
+		Progress: Complete
+		Maintenance_and_Update_Frequency: Unknown
+	Spatial_Domain:
+		Bounding_Coordinates:
+			West_Bounding_Coordinate: -088.160700
+			East_Bounding_Coordinate: -084.688200
+			North_Bounding_Coordinate: +41.775300
+			South_Bounding_Coordinate: +37.755400
+	Keywords:
+		Theme:
+			Theme_Keyword_Thesaurus: None
+			Theme_Keyword: Digital  Orthos
+			Theme_Keyword: Orthophotography
+			Theme_Keyword: Imagery
+			Theme_Keyword: Aerial photography
+			Theme_Keyword: Air photos
+			Theme_Keyword: Aerotriangulation
+			Theme_Keyword: DMC
+		Place:
+			Place_Keyword_Thesaurus: 
+			Place_Keyword: Indiana
+			Place_Keyword: Carmel
+			Place_Keyword: Fishers
+			Place_Keyword: Noblesville
+			Place_Keyword: Westfield
+			Place_Keyword: Cicero
+			Place_Keyword: Arcadia
+			Place_Keyword: Atlanta
+			Place_Keyword: Sheridan
+	Access_Constraints: None
+	Use_Constraints:
+		CREDIT - It is requested that the Hamilton County be cited in 
+		any products generated from this data. The following 
+		source citation should be included: [2009 Hamilton County
+		Orthophotography (www.hamiltoncounty.in.gov)].
+	Point_of_Contact:
+		Contact_Information:
+			Contact_Organization_Primary:
+				Contact_Organization: Hamilton County
+				Contact_Person: Larry Stout
+			Contact_Position: GIS Director
+			Contact_Address:
+				Address_Type: mailing and physical address
+				Address:
+					1 Hamilton County Square, Suite 206
+				City: Noblesville
+				State_or_Province: Indiana
+				Postal_Code: 46060
+			Contact_Voice_Telephone: (317)-776-8254
+			Hours_of_Service: Mon - Fri  9:00 am to 4:30 pm
+	Data_Set_Credit:
+		This data set was acquired for the Hamilton County by
+		Sanborn; quality assurance was provided by The Sidwell Company.
+Data_Quality_Information:
+	Attribute_Accuracy:
+		Attribute_Accuracy_Report:
+			The digital orthophotos were evaluated by The Sidwell Company
+			to ensure each tile extent was 2500 feet x 2500 feet in 
+			Eastings and Northings for the appropriate Indiana State Plane 
+			coordinate system, that the world file references the 
+			center of the pixel located in the upper left hand corner
+			of the tile as the point of origin, that the ground sample
+			distance (GSD) is 6-inches.			
+	Logical_Consistency_Report:
+		Compliance with the accuracy standard was ensured by comparison
+                with previously acquired orthophotography and planimetric data.
+	Completeness_Report:
+		The following methods are used to assure imagery
+		accuracy.
+		1. Use of IMU and ground control network utilizing GPS
+		techniques.
+		2. Use of airborne GPS in conjunction with the acquisition
+		of imagery.
+	Positional_Accuracy:
+		Horizontal_Positional_Accuracy:
+			Horizontal_Positional_Accuracy_Report:
+				The orthophotos were compiled to meet 2.5 feet horizontal
+                                accuracy at 95% confidence level.
+		Vertical_Positional_Accuracy:
+			Vertical_Positional_Accuracy_Report:
+Spatial_Data_Organization_Information:
+	Direct_Spatial_Reference_Method: Raster
+	Raster_Object_Information:
+		Raster_Object_Type: Pixel
+Spatial_Reference_Information:
+	Horizontal_Coordinate_System_Definition:
+		Planar:
+			Grid_Coordinate_System:
+				Grid_Coordinate_System_Name: State Plane Coordinate System 1983
+				State_Plane_Coordinate_System:
+					SPCS_Zone_Identifier: 1301
+					Transverse_Mercator:
+						Scale_Factor_at_Central_Meridian: .9999666667
+						Longitude_of_Central_Meridian: -037.300000
+						Latitude_of_Projection_Origin: +85.400000
+						False_Easting: 100000.00
+						False_Northing: 250000.00
+			Planar_Coordinate_Information:
+				Planar_Coordinate_Encoding_Method: coordinate pair
+				Coordinate_Representation:
+					Abscissa_Resolution: 1.0 and .5
+					Ordinate_Resolution: 1.0 and .5
+				Planar_Distance_Units: Survey Feet
+		Geodetic_Model:
+			Horizontal_Datum_Name: North American Datum of 1983,1986 Adjustment
+			Ellipsoid_Name: Geodetic Reference System 80
+			Semi-major_Axis: 6378137.000
+			Denominator_of_Flattening_Ratio: 298.2572221010
+Distribution_Information:
+	Distributor:
+		Contact_Information:
+			Contact_Organization_Primary:
+				Contact_Organization: Hamilton County
+				Contact_Person: Larry Stout
+			Contact_Position: GIS Director
+			Contact_Address:
+				Address_Type: mailing and physical address
+				Address:
+					1 Hamilton County Square, Suite 206
+				City: Noblesville
+				State_or_Province: Indiana
+				Postal_Code: 46060USA
+			Contact_Voice_Telephone: (317)-776-8254
+			Hours_of_Service: Mon - Fri 9:00 am to 4:30 pm
+	Distribution_Liability: None
+Metadata_Reference_Information:
+	Metadata_Date: 20091229
+	Metadata_Review_Date: 20091229
+	Metadata_Contact:
+		Contact_Information:
+			Contact_Organization_Primary:
+				Contact_Organization: Hamilton County
+				Contact_Person: Larry Stout
+			Contact_Position: GIS Director
+			Contact_Address:
+				Address_Type: mailing and physical address
+				Address: 1 Hamilton County Square, Suite 206
+				City: Noblesville
+				State_or_Province: IN
+				Postal_Code: 46060USA
+			Contact_Voice_Telephone: (317) 776-8254
+			Contact_Facsimile_Telephone: (317) 776-8252
+			Contact_Electronic_Mail_Address: larry.stout@hamiltoncounty.in.gov
+			Hours_of_Service: Mon to Fri 9:00 am to 4:30 pm
+	Metadata_Standard_Name: FGDC Content Standards for Digital Geospatial Metadata
+	Metadata_Standard_Version: FGDC-STD-001-1998
+	Metadata_Use_Constraints:

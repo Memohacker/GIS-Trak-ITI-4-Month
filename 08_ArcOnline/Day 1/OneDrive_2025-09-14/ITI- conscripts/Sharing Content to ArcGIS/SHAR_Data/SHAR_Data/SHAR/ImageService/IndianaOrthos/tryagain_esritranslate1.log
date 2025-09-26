@@ -1,0 +1,4 @@
+[ERROR] - ESRITranslator - Error [InvalidForSome]: <metadata> for-some clause: em:contact(v:Metadata, v:Object) <mdContact>
+
+[ERROR] - ESRITranslator - Error [InvalidForOne]: fragment[MD_CoverageDescription] clause:  for-one clause: em:attributeDescription(v:Subject, v:String) <attDesc>
+

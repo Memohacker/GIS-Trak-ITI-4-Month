@@ -1,0 +1,112 @@
+<ImportMXDLog>	<Messages>
+		<FileName>C:\Users\iti149\Desktop\Mohamed Hesham\08_ArcOnline\Day 1\OneDrive_2025-09-14\ITI- conscripts\Sharing Content to ArcGIS\SHAR_Data\SHAR_Data\SHAR\BuildMapCache\Campus.mxd</FileName>
+		<Message>
+			<Name></Name>
+			<MessageType>Warning</MessageType>
+			<Severity>Medium</Severity>
+			<Description>Layer uses the size renderer with an arrow marker symbol</Description>
+			<Code>20009</Code>
+			<ComponentName>Trees_1K</ComponentName>
+			<ComponentType>Layer</ComponentType>
+</Message>
+		<Message>
+			<Name></Name>
+			<MessageType>Warning</MessageType>
+			<Severity>Medium</Severity>
+			<Description>Layer uses the size renderer with an arrow marker symbol</Description>
+			<Code>20009</Code>
+			<ComponentName>Trees_1K</ComponentName>
+			<ComponentType>Layer</ComponentType>
+</Message>
+		<Message>
+			<Name></Name>
+			<MessageType>Warning</MessageType>
+			<Severity>Medium</Severity>
+			<Description>Layer uses the size renderer with an arrow marker symbol</Description>
+			<Code>20009</Code>
+			<ComponentName>Palm Trees_1K</ComponentName>
+			<ComponentType>Layer</ComponentType>
+</Message>
+		<Message>
+			<Name></Name>
+			<MessageType>Warning</MessageType>
+			<Severity>Medium</Severity>
+			<Description>Layer contains a multilayer line symbol whose symbol widths may result in aliasing when displayed</Description>
+			<Code>20007</Code>
+			<ComponentName>Site Amenities_1K</ComponentName>
+			<ComponentType>Layer</ComponentType>
+</Message>
+		<Message>
+			<Name></Name>
+			<MessageType>Warning</MessageType>
+			<Severity>Medium</Severity>
+			<Description>Layer uses the size renderer with an arrow marker symbol</Description>
+			<Code>20009</Code>
+			<ComponentName>Trees_2K</ComponentName>
+			<ComponentType>Layer</ComponentType>
+</Message>
+		<Message>
+			<Name></Name>
+			<MessageType>Warning</MessageType>
+			<Severity>Medium</Severity>
+			<Description>Layer uses the size renderer with an arrow marker symbol</Description>
+			<Code>20009</Code>
+			<ComponentName>Trees_2K</ComponentName>
+			<ComponentType>Layer</ComponentType>
+</Message>
+		<Message>
+			<Name></Name>
+			<MessageType>Warning</MessageType>
+			<Severity>Medium</Severity>
+			<Description>Layer uses the size renderer with an arrow marker symbol</Description>
+			<Code>20009</Code>
+			<ComponentName>Palm Trees_2K</ComponentName>
+			<ComponentType>Layer</ComponentType>
+</Message>
+		<Message>
+			<Name></Name>
+			<MessageType>Warning</MessageType>
+			<Severity>Medium</Severity>
+			<Description>Layer contains a multilayer line symbol whose symbol widths may result in aliasing when displayed</Description>
+			<Code>20007</Code>
+			<ComponentName>Site Amenities_2K</ComponentName>
+			<ComponentType>Layer</ComponentType>
+</Message>
+		<Message>
+			<Name></Name>
+			<MessageType>Warning</MessageType>
+			<Severity>Medium</Severity>
+			<Description>Layer uses the size renderer with an arrow marker symbol</Description>
+			<Code>20009</Code>
+			<ComponentName>Trees_4K</ComponentName>
+			<ComponentType>Layer</ComponentType>
+</Message>
+		<Message>
+			<Name></Name>
+			<MessageType>Warning</MessageType>
+			<Severity>Medium</Severity>
+			<Description>Layer uses the size renderer with an arrow marker symbol</Description>
+			<Code>20009</Code>
+			<ComponentName>Trees_4K</ComponentName>
+			<ComponentType>Layer</ComponentType>
+</Message>
+		<Message>
+			<Name></Name>
+			<MessageType>Warning</MessageType>
+			<Severity>Medium</Severity>
+			<Description>Layer uses the size renderer with an arrow marker symbol</Description>
+			<Code>20009</Code>
+			<ComponentName>Palm Trees_4K</ComponentName>
+			<ComponentType>Layer</ComponentType>
+</Message>
+		<Message>
+			<Name></Name>
+			<MessageType>Warning</MessageType>
+			<Severity>Medium</Severity>
+			<Description>Layer contains a multilayer line symbol whose symbol widths may result in aliasing when displayed</Description>
+			<Code>20007</Code>
+			<ComponentName>Site Amenities_4K</ComponentName>
+			<ComponentType>Layer</ComponentType>
+</Message>
+</Messages>
+</ImportMXDLog>
